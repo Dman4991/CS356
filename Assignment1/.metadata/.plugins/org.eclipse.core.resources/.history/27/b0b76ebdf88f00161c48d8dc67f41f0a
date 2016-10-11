@@ -1,0 +1,6 @@
+package iVoteSimulation;
+
+public class Student {
+	private Question q;
+	
+}

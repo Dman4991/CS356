@@ -1,0 +1,17 @@
+package iVoteSimulation;
+
+public class TrueFalseQuestion implements Question {
+
+	@Override
+	public void getPossibleAnswers() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void getCorrectAnswers() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

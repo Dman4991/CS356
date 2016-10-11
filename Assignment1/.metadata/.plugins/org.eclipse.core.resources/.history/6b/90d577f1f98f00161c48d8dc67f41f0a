@@ -1,0 +1,13 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class IVoteService {
+	private Question q;
+	private List<Student> students;
+
+	public IVoteService(Question q, ArrayList<Student> students){
+		
+	}
+}

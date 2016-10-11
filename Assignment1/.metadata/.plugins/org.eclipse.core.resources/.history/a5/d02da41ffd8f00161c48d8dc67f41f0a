@@ -1,0 +1,30 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+
+public class SimulationDriver {
+	public static void main(String [] args){
+		System.out.println("Hello World");
+		int numberOfStudents = 10;
+		ArrayList<Student> students = new ArrayList<Student>();
+		
+		//generate questions
+		Question q1 = new MultipleChoiceQuestion(5, 1);
+		Question q2 = new TrueFalseQuestion();
+		
+		//generate list of students
+		for(int i=0; i<numberOfStudents; i++){
+			students.add(new Student(q1, i));
+		}
+		
+		//create, iVote service
+		
+		
+		//pass question and list of students to iVote simulator
+		
+		
+		
+		//print results from iVote simulator
+		
+	}
+}

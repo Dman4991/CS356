@@ -1,0 +1,19 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+
+public class MultipleChoiceQuestion implements Question {
+
+	@Override
+	public void getPossibleAnswers() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public ArrayList<Character> getCorrectAnswers() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

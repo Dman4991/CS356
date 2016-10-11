@@ -1,0 +1,10 @@
+package iVoteSimulation;
+
+public class SimulationDriver {
+	public static void main(String [] args){
+		System.out.println("Hello World");
+		
+		Question q1 = new MultipleChoiceQuestion(5, 1);
+		Question q2 = new TrueFalseQuestion();
+	}
+}

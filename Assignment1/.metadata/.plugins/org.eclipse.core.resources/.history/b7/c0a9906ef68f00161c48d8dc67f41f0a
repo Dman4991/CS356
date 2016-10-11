@@ -1,0 +1,33 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class TrueFalseQuestion implements Question {
+	
+	ArrayList<Character> possibleAnswers;
+	ArrayList<Character> correctAnswers;
+	
+	public TrueFalseQuestion(){
+		possibleAnswers = new ArrayList<Character>();
+		possibleAnswers.add('A');
+		possibleAnswers.add('B');
+		generateAnswers();
+	}
+
+	@Override
+	public ArrayList<Character> getPossibleAnswers() {
+		return possibleAnswers;
+	}
+
+	@Override
+	public ArrayList<Character> getCorrectAnswers() {
+		return correctAnswers;
+	}
+
+	@Override
+	public void generateAnswers() {
+		Random rand = new Random(possibleAnswers.size());
+		correctAnswers.add(possibleAnswers.get(rand.nextInt()));
+	}
+}

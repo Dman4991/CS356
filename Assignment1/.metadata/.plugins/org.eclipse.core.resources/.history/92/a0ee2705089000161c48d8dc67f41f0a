@@ -1,0 +1,76 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class IVoteService {
+	private Question q;
+	private List<Student> students;
+	private List<Integer> selections;
+	private int correctAnswers;
+	private int wrongAnswers;
+
+	public IVoteService(Question q, ArrayList<Student> students){
+		correctAnswers = 0;
+		wrongAnswers = 0;
+		this.q = q;
+		this.students = students;
+		selections = new ArrayList<Integer>();
+		for(int i=0; i<q.getPossibleAnswers().size(); i++){
+			selections.add(i, 0);
+		}
+		countSelections();
+		countAnswers();
+	}
+	
+	private void countSelections(){
+		for(Student student: students){
+			ArrayList<Character> studentAnswers = student.getAnswers();
+			System.out.print("student: "+student.getID() + " answers: "+ studentAnswers.toString()+"\n");
+			for(Character answer: studentAnswers){
+				int timesSelected = selections.get(q.getPossibleAnswers().indexOf(answer));
+				selections.set(q.getPossibleAnswers().indexOf(answer), timesSelected+1);
+			}
+		}
+	}
+	
+	
+	
+	private void countAnswers(){
+		for(Student student: students){
+			if(isCorrectAnswer(q.getCorrectAnswers(), student.getAnswers())){
+				correctAnswers+=1;
+			}
+			else{
+				wrongAnswers+=1;
+			}
+		}
+	}
+	
+	private boolean isCorrectAnswer(ArrayList<Character> correctAnswers, ArrayList<Character> studentAnswers){
+		if(correctAnswers.size() != studentAnswers.size()){
+			return false;
+		}
+		for(Character c: studentAnswers){
+			if(!correctAnswers.contains(c)){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public void printSelectionResults(){
+		//System.out.println("selections: "+selections.toString());
+		System.out.print("\n");
+		for(Character answer: q.getPossibleAnswers()){
+			System.out.print(answer+": "+selections.get(q.getPossibleAnswers().indexOf(answer))+"\n");
+		}
+	}
+	
+	public void printAnswerResults(){
+		System.out.print("Correct Answer Set: " + q.getCorrectAnswers().toString());
+		System.out.print("\nCorrect Answers: "+correctAnswers+"\nWrong Answers: "+wrongAnswers);
+	}
+	
+
+}

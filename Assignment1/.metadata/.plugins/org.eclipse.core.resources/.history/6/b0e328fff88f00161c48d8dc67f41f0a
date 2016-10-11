@@ -1,0 +1,22 @@
+package iVoteSimulation;
+
+public class SimulationDriver {
+	public static void main(String [] args){
+		System.out.println("Hello World");
+		int numberOfStudents = 10;
+		
+		//generate questions
+		Question q1 = new MultipleChoiceQuestion(5, 1);
+		Question q2 = new TrueFalseQuestion();
+		
+		//generate list of students
+		
+		
+		//create, iVote simulator
+		
+		//pass questions and list of students to iVote simulator
+		
+		//print results from iVote simulator
+		
+	}
+}

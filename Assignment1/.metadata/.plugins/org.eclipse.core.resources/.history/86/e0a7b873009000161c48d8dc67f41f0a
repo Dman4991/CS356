@@ -1,0 +1,35 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Student {
+	private int studentID;
+	private Question q;
+	private List<Character> answers;
+	
+	public Student(Question q, int id){
+		this.q = q;
+		studentID = id;
+		answers = new ArrayList<Character>();
+		generateAnswers();
+	}
+
+	private void generateAnswers() {
+		Random rand = new Random();
+		int numAnswersSelected = rand.nextInt(q.getPossibleAnswers().size())+1;
+		System.out.print("Student: "+studentID+" selects " + numAnswersSelected + " number of answers\n");
+		for(int i=0; i<rand.nextInt()+1; i++){
+			answers.add(q.getPossibleAnswers().get(rand.nextInt()));
+		}
+	}
+	
+	public ArrayList<Character> getAnswers(){
+		return (ArrayList<Character>) answers;
+	}
+	
+	public int getID(){
+		return studentID;
+	}
+}

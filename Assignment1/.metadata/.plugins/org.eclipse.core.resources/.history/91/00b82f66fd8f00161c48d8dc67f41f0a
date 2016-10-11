@@ -1,0 +1,59 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class MultipleChoiceQuestion implements Question {
+
+	private List<Character> possibleAnswers;
+	private List<Character> correctAnswers;
+	private char[] alphabetArray = new char[26];
+	
+	public MultipleChoiceQuestion(){
+		this(0);
+	}
+	
+	public MultipleChoiceQuestion(int numberOfChoices){
+		this(numberOfChoices, 0);
+	}
+	
+	public MultipleChoiceQuestion(int numberOfChoices, int numberOfAnswers){
+		for(int i=0; i<26; i++){
+			alphabetArray[i] = (char) (i+65);
+			System.out.print(alphabetArray[i]);
+		}
+		for(int i=0; i<numberOfChoices; i++){
+			System.out.print("Adding possible answer: " + alphabetArray[i]);
+			possibleAnswers.add(alphabetArray[i]);
+		}
+		generateAnswers();
+	}
+	
+	@Override
+	public ArrayList<Character> getPossibleAnswers() {
+		return (ArrayList<Character>) possibleAnswers;
+	}
+	@Override
+	public ArrayList<Character> getCorrectAnswers() {
+		return (ArrayList<Character>) correctAnswers;
+	}
+	@Override
+	public void generateAnswers() {
+		generateAnswers(0);
+	}
+	
+	public void generateAnswers(int numCorrectAnswers){
+		Random rand = new Random(possibleAnswers.size()); 
+		for(int i=0; i<numCorrectAnswers; i++){
+			 correctAnswers.add(possibleAnswers.get(rand.nextInt()));
+		 }
+	}
+
+	@Override
+	public int getNumberOfChoices() {
+		return possibleAnswers.size();
+	}
+	
+
+}

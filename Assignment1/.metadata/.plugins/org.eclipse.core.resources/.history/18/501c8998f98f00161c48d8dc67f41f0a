@@ -1,0 +1,8 @@
+package iVoteSimulation;
+
+public class IVoteService {
+
+	public IVoteService(){
+		
+	}
+}
