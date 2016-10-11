@@ -4,10 +4,10 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="iVoteSimulation.Question"/>
 <fullyQualifiedTypeName name="iVoteSimulation.TrueFalseQuestion"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="iVoteSimulation.Student"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="iVoteSimulation.IVoteService"/>
 <fullyQualifiedTypeName name="iVoteSimulation.MultipleChoiceQuestion"/>
 </qualifiedTypeNameHistroy>

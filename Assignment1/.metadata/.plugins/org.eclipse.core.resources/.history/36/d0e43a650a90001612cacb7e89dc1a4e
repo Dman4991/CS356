@@ -1,0 +1,40 @@
+package iVoteSimulation;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class SimulationDriver {
+	public static void main(String [] args){
+		Random rand = new Random();
+		int numberOfStudents = 10;
+		ArrayList<Student> students = new ArrayList<Student>();
+		
+		//generate questions
+		Question q1 = new MultipleChoiceQuestion(5, 1);
+		Question q2 = new MultipleChoiceQuestion(5, 2);
+		//Question q2 = new TrueFalseQuestion();
+		
+		//generate list of students
+		for(int i=0; i<numberOfStudents; i++){
+			students.add(new Student(q1, String.valueOf(i)));
+		}
+		
+		//create, iVote service
+		IVoteService iVoteService = new IVoteService(q1, students);
+		
+		//print results from iVote simulator
+		iVoteService.printSelectionResults();
+		iVoteService.printAnswerResults();
+		
+		//run 5 tests
+		for(int i=5;i<10; i++){
+			numberOfStudents = rand.nextInt(15)+5; //5-20 students per test
+			Question q = new MultipleChoiceQuestion(i);
+			for(int j=0; j<numberOfStudents; j++){
+				students.add(new Student(q, String.valueOf(j)));
+			}
+			
+		}
+		
+	}
+}

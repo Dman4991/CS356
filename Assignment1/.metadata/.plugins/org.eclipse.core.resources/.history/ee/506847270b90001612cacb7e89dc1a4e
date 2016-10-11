@@ -17,7 +17,7 @@ public class SimulationDriver {
 			
 			//generate students
 			for(int j=0; j<numberOfStudents; j++){
-				students.add(new Student(q, String.valueOf(j+1)));
+				students.add(new Student(q, String.valueOf(j)));
 			}
 			
 			//create iVote service

@@ -6,24 +6,35 @@ import java.util.Random;
 public class SimulationDriver {
 	public static void main(String [] args){
 		Random rand = new Random();
+		int numberOfStudents = 10;
+
+		
+		//generate question
+		
+		//generate list of students
+		
+		//create, iVote service
+		
+		//print results from iVote simulator
+		
 		
 		//run 5 tests
 		for(int i=5;i<10; i++){
 			ArrayList<Student> students = new ArrayList<Student>();
-			int numberOfStudents = rand.nextInt(15)+5; //5-20 students per test
+			numberOfStudents = rand.nextInt(15)+5; //5-20 students per test
 			
 			//generate question
-			Question q = new MultipleChoiceQuestion(i, i-4);
+			Question q = new MultipleChoiceQuestion(i);
 			
 			//generate students
 			for(int j=0; j<numberOfStudents; j++){
-				students.add(new Student(q, String.valueOf(j+1)));
+				students.add(new Student(q, String.valueOf(j)));
 			}
 			
 			//create iVote service
 			IVoteService iVoteService = new IVoteService(q, students);
 			
-			//print results from iVote simulator
+			//
 			iVoteService.printSelectionResults();
 			iVoteService.printAnswerResults();
 			

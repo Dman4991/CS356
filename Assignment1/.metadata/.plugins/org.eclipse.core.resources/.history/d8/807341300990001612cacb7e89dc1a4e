@@ -20,8 +20,8 @@ public class Student {
 		Random rand = new Random();
 		//for random amount of answers
 		//int numberOfAnswers = rand.nextInt(q.getPossibleAnswers().size())+1;
-		int numberOfAnswers = q.numAnswersAllowedToSelect();
-		while(answers.size()<numberOfAnswers){
+		//int numberOfAnswers = q.numAnswersAllowedToSelect();
+		while(answers.size()<q.numAnswersAllowedToSelect()){
 			int answerIndexSelected = rand.nextInt(q.getPossibleAnswers().size());
 			if(!answers.contains(q.getPossibleAnswers().get(answerIndexSelected))){
 				answers.add(q.getPossibleAnswers().get(answerIndexSelected));
