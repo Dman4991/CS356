@@ -37,12 +37,10 @@ public class MultipleChoiceQuestion implements Question {
 	public ArrayList<Character> getPossibleAnswers() {
 		return (ArrayList<Character>) possibleAnswers;
 	}
-	
 	@Override
 	public ArrayList<Character> getCorrectAnswers() {
 		return (ArrayList<Character>) correctAnswers;
 	}
-	
 	@Override
 	public void generateAnswers() {
 		generateAnswers(0);

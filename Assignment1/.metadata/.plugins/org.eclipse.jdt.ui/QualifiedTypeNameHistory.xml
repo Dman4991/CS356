@@ -7,7 +7,8 @@
 <fullyQualifiedTypeName name="iVoteSimulation.Student"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="iVoteSimulation.MultipleChoiceQuestion"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="iVoteSimulation.IVoteService"/>
-<fullyQualifiedTypeName name="iVoteSimulation.MultipleChoiceQuestion"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>

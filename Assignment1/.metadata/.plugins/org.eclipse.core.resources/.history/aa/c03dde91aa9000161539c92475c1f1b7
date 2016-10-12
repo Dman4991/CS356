@@ -36,8 +36,4 @@ public class Student {
 	public String getID(){
 		return studentID;
 	}
-	
-	public String toString(){
-		return studentID + " " + answers.toString();
-	}
 }

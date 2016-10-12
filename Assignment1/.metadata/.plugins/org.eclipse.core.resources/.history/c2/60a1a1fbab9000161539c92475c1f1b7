@@ -1,7 +1,6 @@
 package iVoteSimulation;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class IVoteService {
@@ -23,17 +22,15 @@ public class IVoteService {
 	}
 	
 	public void addStudentResponse(Student response){
-		Iterator<Student> iterator = students.iterator();
-		while(iterator.hasNext()){
-			Student student = iterator.next();
-			if(student.getID().equals(response.getID())){
-				iterator.remove();
+		for(Student student:students){
+			if(student.getID()==response.getID()){
+				students.remove(students.indexOf(student));
 			}
 		}
 		students.add(response);
 	}
 	
-	private void countSelections(){
+	public void countSelections(){
 		System.out.print("\n\n");
 		for(Student student: students){
 			ArrayList<Character> studentAnswers = student.getAnswers();
@@ -45,7 +42,7 @@ public class IVoteService {
 		}
 	}
 	
-	private void countAnswers(){
+	public void countAnswers(){
 		for(Student student: students){
 			if(isCorrectAnswer(q.getCorrectAnswers(), student.getAnswers())){
 				correctAnswers+=1;
@@ -68,23 +65,16 @@ public class IVoteService {
 		return true;
 	}
 	
-	private void printSelectionResults(){
+	public void printSelectionResults(){
 		System.out.print("\n");
 		for(Character answer: q.getPossibleAnswers()){
 			System.out.print(answer+": "+selections.get(q.getPossibleAnswers().indexOf(answer))+"\n");
 		}
 	}
 	
-	private void printAnswerResults(){
+	public void printAnswerResults(){
 		System.out.print("\nCorrect Answer Set: " + q.getCorrectAnswers().toString());
 		System.out.print("\nCorrect Answers: "+correctAnswers+
 						 "\nWrong Answers: "+wrongAnswers);
-	}
-	
-	public void printResults(){
-		countSelections();
-		countAnswers();
-		printSelectionResults();
-		printAnswerResults();
 	}
 }

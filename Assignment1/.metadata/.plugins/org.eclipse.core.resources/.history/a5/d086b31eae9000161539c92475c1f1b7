@@ -23,11 +23,22 @@ public class IVoteService {
 	}
 	
 	public void addStudentResponse(Student response){
+		System.out.println("\nAttempting to add student "+  response.getID());
+		/*for(Student student:students){
+			if(student.getID().equals(response.getID())){
+				System.out.println("removing student " + student.getID() +" Before: " + students.toString());
+				students.remove(students.indexOf(student));
+				System.out.println("After: " + students.toString());
+			}
+		}*/
 		Iterator<Student> iterator = students.iterator();
 		while(iterator.hasNext()){
 			Student student = iterator.next();
 			if(student.getID().equals(response.getID())){
+				System.out.println("removing student " + student.getID() +" Before: " + students.toString());
 				iterator.remove();
+				System.out.println("After: " + students.toString());
+
 			}
 		}
 		students.add(response);

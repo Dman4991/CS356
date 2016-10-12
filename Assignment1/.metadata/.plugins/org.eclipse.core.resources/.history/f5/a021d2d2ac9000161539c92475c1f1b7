@@ -1,7 +1,6 @@
 package iVoteSimulation;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class IVoteService {
@@ -23,11 +22,9 @@ public class IVoteService {
 	}
 	
 	public void addStudentResponse(Student response){
-		Iterator<Student> iterator = students.iterator();
-		while(iterator.hasNext()){
-			Student student = iterator.next();
-			if(student.getID().equals(response.getID())){
-				iterator.remove();
+		for(Student student:students){
+			if(student.getID()==response.getID()){
+				students.remove(students.indexOf(student));
 			}
 		}
 		students.add(response);
