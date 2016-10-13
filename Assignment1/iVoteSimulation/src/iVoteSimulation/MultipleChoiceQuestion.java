@@ -9,7 +9,6 @@ public class MultipleChoiceQuestion implements Question {
 	private List<Character> possibleAnswers;
 	private List<Character> correctAnswers;
 	private char[] alphabetArray = new char[26];
-	private int answerSetSize;
 	
 	public MultipleChoiceQuestion(){
 		this(0);
@@ -30,7 +29,6 @@ public class MultipleChoiceQuestion implements Question {
 			possibleAnswers.add(alphabetArray[i]);
 		}
 		generateAnswers(numberOfAnswers);
-		answerSetSize = numberOfAnswers;
 	}
 	
 	@Override
@@ -48,6 +46,7 @@ public class MultipleChoiceQuestion implements Question {
 		generateAnswers(0);
 	}
 	
+	//generate the an answer set that is the specified number of answers
 	public void generateAnswers(int numCorrectAnswers){
 		Random rand = new Random(); 
 		for(int i=0; i<numCorrectAnswers; i++){
@@ -62,13 +61,8 @@ public class MultipleChoiceQuestion implements Question {
 	}
 
 	@Override
-	public int getNumberOfChoices() {
-		return possibleAnswers.size();
-	}
-
-	@Override
 	public int numAnswersAllowedToSelect() {
-		return answerSetSize;
+		return correctAnswers.size();
 	}
 	
 

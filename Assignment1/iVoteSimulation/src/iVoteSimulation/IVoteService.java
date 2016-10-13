@@ -7,6 +7,7 @@ import java.util.List;
 public class IVoteService {
 	private Question q;
 	private List<Student> students;
+	private List<Student> discardedResponses;
 	private List<Integer> selections;
 	private int correctAnswers;
 	private int wrongAnswers;
@@ -15,6 +16,7 @@ public class IVoteService {
 		correctAnswers = 0;
 		wrongAnswers = 0;
 		this.q = q;
+		discardedResponses = new ArrayList<Student>();
 		students = new ArrayList<Student>();
 		selections = new ArrayList<Integer>();
 		for(int i=0; i<q.getPossibleAnswers().size(); i++){
@@ -22,22 +24,25 @@ public class IVoteService {
 		}
 	}
 	
+	//adds a response from a student, checks if the student 
+	//has already responded and removes any previous response
 	public void addStudentResponse(Student response){
 		Iterator<Student> iterator = students.iterator();
 		while(iterator.hasNext()){
 			Student student = iterator.next();
 			if(student.getID().equals(response.getID())){
+				discardedResponses.add(student);
 				iterator.remove();
 			}
 		}
 		students.add(response);
 	}
 	
+	//counts the total number of each possible selection of answers
 	private void countSelections(){
-		System.out.print("\n\n");
 		for(Student student: students){
 			ArrayList<Character> studentAnswers = student.getAnswers();
-			System.out.print("student: "+student.getID() + " answers: "+ studentAnswers.toString()+"\n");
+			System.out.print("student: "+student.toString() + "\n");
 			for(Character answer: studentAnswers){
 				int timesSelected = selections.get(q.getPossibleAnswers().indexOf(answer));
 				selections.set(q.getPossibleAnswers().indexOf(answer), timesSelected+1);
@@ -45,9 +50,10 @@ public class IVoteService {
 		}
 	}
 	
+	//counts all the answers
 	private void countAnswers(){
 		for(Student student: students){
-			if(isCorrectAnswer(q.getCorrectAnswers(), student.getAnswers())){
+			if(isCorrectAnswer(student.getAnswers())){
 				correctAnswers+=1;
 			}
 			else{
@@ -56,7 +62,9 @@ public class IVoteService {
 		}
 	}
 	
-	private boolean isCorrectAnswer(ArrayList<Character> correctAnswers, ArrayList<Character> studentAnswers){
+	//checks if the student answer set is equal to the correct answer set
+	private boolean isCorrectAnswer(ArrayList<Character> studentAnswers){
+		ArrayList<Character> correctAnswers = q.getCorrectAnswers();
 		if(correctAnswers.size() != studentAnswers.size()){
 			return false;
 		}
@@ -68,23 +76,36 @@ public class IVoteService {
 		return true;
 	}
 	
-	private void printSelectionResults(){
+	//prints count of all possible answer selections
+	private void printSelectionCountResults(){
 		System.out.print("\n");
 		for(Character answer: q.getPossibleAnswers()){
 			System.out.print(answer+": "+selections.get(q.getPossibleAnswers().indexOf(answer))+"\n");
 		}
 	}
 	
+	//prints the number of correct and wrong answers
 	private void printAnswerResults(){
 		System.out.print("\nCorrect Answer Set: " + q.getCorrectAnswers().toString());
 		System.out.print("\nCorrect Answers: "+correctAnswers+
 						 "\nWrong Answers: "+wrongAnswers);
 	}
 	
+	//prints any student responses that were discarded
+	private void printDiscardedAnswers(){
+		System.out.println("\nDiscarded Answers");
+		for(Student student: discardedResponses){
+			System.out.println("Student: "+student.toString());
+		}
+	}
+	
 	public void printResults(){
 		countSelections();
 		countAnswers();
-		printSelectionResults();
+		printDiscardedAnswers();
+		System.out.print("\nNumber of Responses: " + students.size());
+		printSelectionCountResults();
 		printAnswerResults();
+		System.out.println("\n-------------------------------\n");
 	}
 }

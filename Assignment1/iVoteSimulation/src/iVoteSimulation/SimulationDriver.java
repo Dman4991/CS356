@@ -20,9 +20,9 @@ public class SimulationDriver {
 			for(int j=0; j<numberOfStudents; j++){
 				iVoteService.addStudentResponse(new Student(q, String.valueOf(j+1)));
 			}
+			//add duplicate response, iVote simulator should discard the first response
 			iVoteService.addStudentResponse(new Student(q, String.valueOf(2)));
 
-			
 			//print results from iVote simulator
 			iVoteService.printResults();
 			

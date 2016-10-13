@@ -16,9 +16,10 @@ public class Student {
 		generateAnswers();
 	}
 
+	
 	private void generateAnswers() {
 		Random rand = new Random();
-		//for random amount of answers
+		//for random amount of answers uncomment next line, and comment out the following line.
 		//int numberOfAnswers = rand.nextInt(q.getPossibleAnswers().size())+1;
 		int numberOfAnswers = q.numAnswersAllowedToSelect();
 		while(answers.size()<numberOfAnswers){

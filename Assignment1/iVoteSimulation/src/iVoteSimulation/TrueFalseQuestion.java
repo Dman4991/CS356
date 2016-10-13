@@ -32,11 +32,6 @@ public class TrueFalseQuestion implements Question {
 	}
 
 	@Override
-	public int getNumberOfChoices() {
-		return possibleAnswers.size();
-	}
-
-	@Override
 	public int numAnswersAllowedToSelect() {
 		return 1;
 	}

@@ -1,2 +1,4 @@
 1476217521582	Rename type 'IVoteDriver'
 1476218030818	Change method 'getCorrectAnswers'
+1476390432013	Rename method 'printSelectionResults'
+1476390518444	Rename method 'printPossibleAnswerResults'
