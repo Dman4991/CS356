@@ -18,25 +18,14 @@ public class MultipleChoiceQuestion implements Question {
 		this(numberOfChoices, 0);
 	}
 	
-	//creates a list of possible answers
 	public MultipleChoiceQuestion(int numberOfChoices, int numberOfAnswers){
-		if(numberOfAnswers>numberOfChoices){
-			//default to equaling
-			numberOfAnswers=numberOfChoices;
-		}
-		//limit number of choices to single letter alphabet A-Z
-		if(numberOfChoices>26){
-			numberOfChoices=26;
-		}
-		if(numberOfAnswers>26){
-			numberOfAnswers=26;
-		}
 		possibleAnswers = new ArrayList<Character>(numberOfChoices);
 		correctAnswers= new ArrayList<Character>(numberOfAnswers);
 		for(int i=0; i<26; i++){
 			alphabetArray[i] = (char) (i+65);
 		}
 		for(int i=0; i<numberOfChoices; i++){
+			//System.out.print("Adding possible answer: " + alphabetArray[i] + "\n");
 			possibleAnswers.add(alphabetArray[i]);
 		}
 		generateAnswers(numberOfAnswers);

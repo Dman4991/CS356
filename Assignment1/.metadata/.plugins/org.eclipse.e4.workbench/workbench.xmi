@@ -176,7 +176,7 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_B7xfm48gEeau3ODG1rfdBQ" containerData="8875" selectedElement="_B7xfpY8gEeau3ODG1rfdBQ">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_B7xfnI8gEeau3ODG1rfdBQ" containerData="4027" selectedElement="_rCBsMJGGEeaLXPq9skVdWg" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_B7xfnI8gEeau3ODG1rfdBQ" containerData="4692" selectedElement="_rCBsMJGGEeaLXPq9skVdWg" horizontal="true">
                 <children xsi:type="basic:PartSashContainer" xmi:id="_rCBsMJGGEeaLXPq9skVdWg" containerData="9000" selectedElement="_B7xfnY8gEeau3ODG1rfdBQ" horizontal="true">
                   <children xsi:type="basic:PartStack" xmi:id="_rCBsMZGGEeaLXPq9skVdWg" elementId="PartStack@68db67d" containerData="1000" selectedElement="_B7xfl48gEeau3ODG1rfdBQ">
                     <children xsi:type="advanced:Placeholder" xmi:id="_B7xfl48gEeau3ODG1rfdBQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_5ADhwI8fEeau3ODG1rfdBQ"/>
@@ -195,7 +195,7 @@
                   </children>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_B7xfpY8gEeau3ODG1rfdBQ" elementId="bottom" containerData="5973" selectedElement="_B7xfqo8gEeau3ODG1rfdBQ">
+              <children xsi:type="basic:PartStack" xmi:id="_B7xfpY8gEeau3ODG1rfdBQ" elementId="bottom" containerData="5308" selectedElement="_B7xfqo8gEeau3ODG1rfdBQ">
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <tags>Java</tags>
                 <tags>active</tags>
@@ -237,12 +237,11 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_4_ycAI8fEeau3ODG1rfdBQ" elementId="org.eclipse.ui.editorss" selectedElement="_4_ycAY8fEeau3ODG1rfdBQ">
-      <children xsi:type="basic:PartStack" xmi:id="_4_ycAY8fEeau3ODG1rfdBQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_GfkOQI_5Eeaz1Y54VzdOsQ">
+      <children xsi:type="basic:PartStack" xmi:id="_4_ycAY8fEeau3ODG1rfdBQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_I6DgUI8gEeau3ODG1rfdBQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_I6DgUI8gEeau3ODG1rfdBQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SimulationDriver.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SimulationDriver.java&quot; partName=&quot;SimulationDriver.java&quot; title=&quot;SimulationDriver.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/SimulationDriver.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/SimulationDriver.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;719&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SimulationDriver.java&quot; partName=&quot;SimulationDriver.java&quot; title=&quot;SimulationDriver.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/SimulationDriver.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/SimulationDriver.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;842&quot; selectionTopPixel=&quot;32&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -254,13 +253,13 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_KZME0I_xEeaz1Y54VzdOsQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MultipleChoiceQuestion.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MultipleChoiceQuestion.java&quot; partName=&quot;MultipleChoiceQuestion.java&quot; title=&quot;MultipleChoiceQuestion.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/MultipleChoiceQuestion.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/MultipleChoiceQuestion.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1796&quot; selectionTopPixel=&quot;541&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MultipleChoiceQuestion.java&quot; partName=&quot;MultipleChoiceQuestion.java&quot; title=&quot;MultipleChoiceQuestion.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/MultipleChoiceQuestion.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/MultipleChoiceQuestion.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;648&quot; selectionTopPixel=&quot;403&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_PoVDMI_xEeaz1Y54VzdOsQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TrueFalseQuestion.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TrueFalseQuestion.java&quot; partName=&quot;TrueFalseQuestion.java&quot; title=&quot;TrueFalseQuestion.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/TrueFalseQuestion.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/TrueFalseQuestion.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;25&quot; selectionOffset=&quot;839&quot; selectionTopPixel=&quot;115&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TrueFalseQuestion.java&quot; partName=&quot;TrueFalseQuestion.java&quot; title=&quot;TrueFalseQuestion.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/TrueFalseQuestion.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/TrueFalseQuestion.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;160&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -272,7 +271,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_GfkOQI_5Eeaz1Y54VzdOsQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="IVoteService.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IVoteService.java&quot; partName=&quot;IVoteService.java&quot; title=&quot;IVoteService.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/IVoteService.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/IVoteService.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3308&quot; selectionTopPixel=&quot;2090&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IVoteService.java&quot; partName=&quot;IVoteService.java&quot; title=&quot;IVoteService.java&quot; tooltip=&quot;iVoteSimulation/src/iVoteSimulation/IVoteService.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/iVoteSimulation/src/iVoteSimulation/IVoteService.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3168&quot; selectionTopPixel=&quot;2044&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -333,7 +332,7 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_5CApkI8fEeau3ODG1rfdBQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors (1 item)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;150&quot; org.eclipse.ui.ide.markerType=&quot;150&quot; org.eclipse.ui.ide.pathField=&quot;200&quot; org.eclipse.ui.ide.resourceField=&quot;150&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;500&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;150&quot; org.eclipse.ui.ide.markerType=&quot;150&quot; org.eclipse.ui.ide.pathField=&quot;200&quot; org.eclipse.ui.ide.resourceField=&quot;150&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;500&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_CD3EkI8gEeau3ODG1rfdBQ" elementId="org.eclipse.ui.views.ProblemView">
@@ -456,7 +455,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_40FiUI8fEeau3ODG1rfdBQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_0-Uk8JGAEeaLXPq9skVdWg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_4WaIn48fEeau3ODG1rfdBQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_BrS-4JSXEeaJPp26znXBXQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_4WaIn48fEeau3ODG1rfdBQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_40FiUY8fEeau3ODG1rfdBQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -489,7 +488,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_40GJYo8fEeau3ODG1rfdBQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_0-Uk-pGAEeaLXPq9skVdWg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_4WaIQI8fEeau3ODG1rfdBQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_BrWpQJSXEeaJPp26znXBXQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_4WaIQI8fEeau3ODG1rfdBQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_40GJY48fEeau3ODG1rfdBQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

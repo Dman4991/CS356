@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-//does not currently work
 public class TrueFalseQuestion implements Question {
 	
 	private List<Character> possibleAnswers;

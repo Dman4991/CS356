@@ -20,10 +20,6 @@ public class MultipleChoiceQuestion implements Question {
 	
 	//creates a list of possible answers
 	public MultipleChoiceQuestion(int numberOfChoices, int numberOfAnswers){
-		if(numberOfAnswers>numberOfChoices){
-			//default to equaling
-			numberOfAnswers=numberOfChoices;
-		}
 		//limit number of choices to single letter alphabet A-Z
 		if(numberOfChoices>26){
 			numberOfChoices=26;

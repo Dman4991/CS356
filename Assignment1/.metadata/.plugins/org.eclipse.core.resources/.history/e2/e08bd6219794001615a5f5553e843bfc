@@ -103,7 +103,7 @@ public class IVoteService {
 		countSelections();
 		countAnswers();
 		printDiscardedAnswers();
-		System.out.print("\nNumber of Accepted Responses: " + students.size());
+		System.out.print("\nNumber of Responses: " + students.size());
 		printSelectionCountResults();
 		printAnswerResults();
 		System.out.println("\n-------------------------------\n");
