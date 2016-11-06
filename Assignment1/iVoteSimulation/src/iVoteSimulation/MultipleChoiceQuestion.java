@@ -10,14 +10,6 @@ public class MultipleChoiceQuestion implements Question {
 	private List<Character> correctAnswers;
 	private char[] alphabetArray = new char[26];
 	
-	public MultipleChoiceQuestion(){
-		this(0);
-	}
-	
-	public MultipleChoiceQuestion(int numberOfChoices){
-		this(numberOfChoices, 0);
-	}
-	
 	//creates a list of possible answers
 	public MultipleChoiceQuestion(int numberOfChoices, int numberOfAnswers){
 		if(numberOfAnswers>numberOfChoices){
@@ -33,12 +25,17 @@ public class MultipleChoiceQuestion implements Question {
 		}
 		possibleAnswers = new ArrayList<Character>(numberOfChoices);
 		correctAnswers= new ArrayList<Character>(numberOfAnswers);
+		
+		//create alphabet array, I think Java already has this
 		for(int i=0; i<26; i++){
 			alphabetArray[i] = (char) (i+65);
 		}
+		
+		//add all possible answers to numberOfChoices
 		for(int i=0; i<numberOfChoices; i++){
 			possibleAnswers.add(alphabetArray[i]);
 		}
+		
 		generateAnswers(numberOfAnswers);
 	}
 	
@@ -58,7 +55,7 @@ public class MultipleChoiceQuestion implements Question {
 	}
 	
 	//generate the an answer set that is the specified number of answers
-	public void generateAnswers(int numCorrectAnswers){
+	private void generateAnswers(int numCorrectAnswers){
 		Random rand = new Random(); 
 		for(int i=0; i<numCorrectAnswers; i++){
 			int indexOfPossibleAnswer = rand.nextInt(possibleAnswers.size());

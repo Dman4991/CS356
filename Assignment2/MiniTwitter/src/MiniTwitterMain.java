@@ -1,3 +1,8 @@
+/*
+ * Daniel Avetyan
+ * CS 356 Assignment 2
+ * Due November 8, 2016
+ */
 
 public class MiniTwitterMain {
 	public static void main(String[] args) {

@@ -28,13 +28,12 @@ public class TrueFalseQuestion implements Question {
 
 	@Override
 	public void generateAnswers() {
-		Random rand = new Random(possibleAnswers.size());
-		correctAnswers.add(possibleAnswers.get(rand.nextInt()));
+		Random rand = new Random();
+		correctAnswers.add(possibleAnswers.get(rand.nextInt(possibleAnswers.size())+1));
 	}
 
 	@Override
 	public int numAnswersAllowedToSelect() {
 		return 1;
 	}
-
 }

@@ -19,11 +19,16 @@ public class Student {
 	
 	private void generateAnswers() {
 		Random rand = new Random();
+		
+		int numberOfAnswers = 0;
 		//for random amount of answers uncomment next line, and comment out the following line.
-		//int numberOfAnswers = rand.nextInt(q.getPossibleAnswers().size())+1;
-		int numberOfAnswers = q.numAnswersAllowedToSelect();
+		//numberOfAnswers = rand.nextInt(q.getPossibleAnswers().size())+1;
+		numberOfAnswers = q.numAnswersAllowedToSelect();
+		
+		//ensures correct answer set size
 		while(answers.size()<numberOfAnswers){
 			int answerIndexSelected = rand.nextInt(q.getPossibleAnswers().size());
+			//forces a proper set of answers (no repeated answers)
 			if(!answers.contains(q.getPossibleAnswers().get(answerIndexSelected))){
 				answers.add(q.getPossibleAnswers().get(answerIndexSelected));
 			}
