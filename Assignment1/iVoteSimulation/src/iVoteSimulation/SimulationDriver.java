@@ -1,3 +1,8 @@
+/*
+ * Daniel Avetyan
+ * CS 356 Assignment 1
+ */
+
 package iVoteSimulation;
 
 import java.util.Random;
