@@ -69,6 +69,7 @@ public class Tweet {
 	private void setPositiveWords() {
 		positiveWords.add("good");
 		positiveWords.add("thank");
+		positiveWords.add("excellent");
 		positiveWords.add("like");
 		positiveWords.add("great");
 		positiveWords.add("thanks");

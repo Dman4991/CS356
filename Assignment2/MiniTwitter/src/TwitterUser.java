@@ -77,6 +77,10 @@ public class TwitterUser implements User {
 
 	/**Posts a tweet and notifies all observers*/
 	public void postTweet(Tweet tweet){
+		//to see own tweets
+		everyonesTweets.add(tweet);
+		
+		//to post to everyone that follows
 		myTweets.postTweet(tweet);
 		myTweets.notifyObservers(tweet);
 	}

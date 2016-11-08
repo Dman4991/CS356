@@ -18,6 +18,8 @@ import javax.swing.JOptionPane;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -28,7 +30,7 @@ public class UserView {
 	
 	private TwitterUser user;
 
-	private static HashMap<User, Thread> userThreadsActive= new HashMap<User, Thread>();
+	private static HashMap<String, UserView> userViewsOpen = new HashMap<String, UserView>();
 	private JFrame frame;
 	private JTextField txtUserId;
 	private JTextField txtTweetMessage;
@@ -36,19 +38,17 @@ public class UserView {
 	private JButton btnAddUser;
 	private JList<TwitterUser> usersFollowedList;
 	private JList<Tweet> feedList;
-	private Thread t;
-	private int originalFeedSize;
 	private int xFrame=0;
 	private int yFrame=0;
 
 	/**
 	 * Launch the application. 
 	 */
-	public static void newScreen(TwitterUser user, int originalFeedSize, double x, double y) {
+	public static void newScreen(TwitterUser user, double x, double y) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					UserView window = new UserView(user, originalFeedSize, x, y);
+					UserView window = new UserView(user, x, y);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -59,11 +59,11 @@ public class UserView {
 
 	/**
 	 * Create the application.
+	 * x and y are used for the position of the frame.
 	 */
-	public UserView(TwitterUser user, int originalFeedSize, double x, double y) {
+	public UserView(TwitterUser user, double x, double y) {
 		xFrame = (int)x;
 		yFrame = (int)y;
-		this.originalFeedSize = originalFeedSize;
 		this.user = user;
 		initialize();
 	}
@@ -72,13 +72,21 @@ public class UserView {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		
+		//Add this object to the list of open views
+		userViewsOpen.put(user.getName(), this);	
+
 		frame = new JFrame();
 		frame.setTitle(user.getName());
 		frame.setBounds(xFrame, yFrame, 500, 500);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		//Remove users from the open window list when manually closed.
+		frame.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent event){
+				userViewsOpen.remove(user.getName());
+			}
+		});
 		
 		//TEXT FIELD USER ID
 		txtUserId = new JTextField();
@@ -109,7 +117,7 @@ public class UserView {
 					redraw = false;
 				}
 				if(redraw){
-					reDraw(originalFeedSize);
+					reDraw();
 				}
 			}
 		});
@@ -161,59 +169,23 @@ public class UserView {
 					user.postTweet(new Tweet(tweetMessage));
 				}
 				txtTweetMessage.setText("");
+				
+				for(String key: userViewsOpen.keySet()){
+					UserView view = userViewsOpen.get(key);
+					view.reDraw();
+				}
 			}
 		});
 		btnPostTweet.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnPostTweet.setBounds(266, 232, 197, 46);
 		frame.getContentPane().add(btnPostTweet);
-		
-		
-		//if a thread for this user exists, kill it and create a new one
-		if(userThreadsActive.containsKey(user)){
-			killThread(userThreadsActive.get(user));
-		}
-		
-		//Starts a new tread to listen for feed updates
-		t = new Thread(new Runnable() {	
-			@Override
-			public void run() {
-				try {
-					updateFeed();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		t.start();
-		userThreadsActive.put(user, t);
-	}
-	
-	//Instead of doing threads I later figured out I can update the screens
-	//any time the post tweet button is pressed, though this is already implemented.
-	/**Any time the feed changes the frame gets redrawn.*/
-	public void updateFeed() throws InterruptedException{
-		int currentFeedSize=0;
-		while(true){
-			Thread.sleep(500);
-			currentFeedSize = user.getFeed().size();
-			if(currentFeedSize != originalFeedSize){
-				break;
-			}
-		}
-		reDraw(currentFeedSize);
 	}
 	
 	/**Improper but effective way of doing a screen refresh*/
 	@SuppressWarnings("deprecation")
-	public void reDraw(int size){
+	private void reDraw(){
 		frame.dispose();
 		Point p = frame.location();
-		newScreen(user, size, p.getX(), p.getY());
-	}
-	
-	/**Kills any Thread that is passed as an argument*/
-	@SuppressWarnings("deprecation")
-	public void killThread(Thread t){
-		t.suspend();
+		newScreen(user, p.getX(), p.getY());
 	}
 }

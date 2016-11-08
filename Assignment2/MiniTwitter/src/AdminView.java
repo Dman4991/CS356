@@ -53,7 +53,7 @@ public class AdminView {
 		});
 	}
 	
-	//singleton
+	//Singleton pattern
 	public static AdminView getInstance(TwitterGroup rootGroup){
 		if(INSTANCE==null){
 			INSTANCE = new AdminView(rootGroup);
@@ -74,6 +74,7 @@ public class AdminView {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
 		frame.setTitle("Admin Console");
 		frame.setBounds(100, 100, 750, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -198,8 +199,8 @@ public class AdminView {
 				@SuppressWarnings("deprecation")
 				Point p = frame.location();
 				
-				//create a user view window
-				UserView.newScreen(selectedUser, selectedUser.getFeed().size(), p.getX(), p.getY());
+				//create a user view window 
+				UserView.newScreen(selectedUser, p.getX(), p.getY());
 			}
 		});
 		btnOpenUserView.setBounds(350, 103, 363, 29);
