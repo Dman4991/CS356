@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * Group Interface.
- * Allows for observer and component pattern.
+ * Allows for visitor and component pattern.
  */
 public interface Group extends UserGroupComponent{
 	
