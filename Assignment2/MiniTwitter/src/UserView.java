@@ -157,6 +157,7 @@ public class UserView {
 				
 				//if a valid tweet
 				if(tweetMessage!=null && tweetMessage.length()>0){
+					tweetMessage = "@"+user.getName()+" "+tweetMessage;
 					user.postTweet(new Tweet(tweetMessage));
 				}
 				txtTweetMessage.setText("");
@@ -187,6 +188,8 @@ public class UserView {
 		userThreadsActive.put(user, t);
 	}
 	
+	//Instead of doing threads I later figured out I can update the screens
+	//any time the post tweet button is pressed, though this is already implemented.
 	/**Any time the feed changes the frame gets redrawn.*/
 	public void updateFeed() throws InterruptedException{
 		int currentFeedSize=0;
@@ -204,7 +207,6 @@ public class UserView {
 	@SuppressWarnings("deprecation")
 	public void reDraw(int size){
 		frame.dispose();
-		frame.setVisible(false);
 		Point p = frame.location();
 		newScreen(user, size, p.getX(), p.getY());
 	}
